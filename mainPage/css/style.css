@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+header .logo {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* mixin pour les dimension et la couleur*/
+  background-color: rgb(233, 19, 233);
+  height: 50px;
+  width: 40%;
+}
+header menu {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 50px;
+  width: 60%;
+}
+header menu nav {
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+header menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

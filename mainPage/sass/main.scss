@@ -1,0 +1,50 @@
+@mixin myFlexOption($justifyContent:flex-start, $alignItem:center){ /* mixin pouur les flexbox*/
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+} 
+
+@mixin dimensionBox($bgc:white, $width:100%, $height:50px){ /* mixin pour les dimension et la couleur*/
+background-color: $bgc;
+height: $height;
+width: $width;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    @include myFlexOption();
+    @include dimensionBox();
+    position: fixed;
+    top: 0%;
+    left: 0%;
+
+    .logo{
+        @include myFlexOption();
+        @include dimensionBox(rgb(233, 19, 233),40%);
+        
+    }
+    
+    menu{
+        margin: 0;
+        padding: 0;
+        @include dimensionBox(white, 60%) ;
+
+        nav{
+            @include dimensionBox(white, 100%, 100%) ;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0; 
+            list-style-type: none;
+            @include dimensionBox(white, 100%, 100%) ;
+            @include myFlexOption(space-around)
+        }
+    }
+}
+
