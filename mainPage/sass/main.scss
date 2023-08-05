@@ -105,9 +105,11 @@ main{
         @include dimensionBox(#8009e2, 100%, 50px);
         @include myFlexOption();
     }
+    
     div{
-        @include myFlexOption(space-around)
+        @include myFlexOption(space-around);
     }
+    
 
     &__bugatti{
         @include dimensionBox(white, 400px, 250px);
@@ -127,4 +129,6 @@ main{
         @include imagePositon();
         background-image: url(../../pictures/maseratiMc20.jpg);
     }
+
+
 }
