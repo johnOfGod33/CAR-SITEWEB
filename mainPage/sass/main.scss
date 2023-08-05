@@ -15,6 +15,10 @@ width: $width;
     padding: 0;
 }
 
+@mixin imagePositon($bgcSize:cover, $bgcPosition:center){
+    background-size: $bgcSize;
+    background-position: $bgcPosition;
+}
 
 body{
     @include marginPadding();
@@ -27,12 +31,15 @@ header{
     z-index: 5;
     top: 0%;
     left: 0%;
-    border: 1px solid black;
+
 
     .logo{
-        @include myFlexOption();
-        @include dimensionBox(rgb(233, 19, 233),40%, 100%);
-        
+        @include myFlexOption(center);
+        @include dimensionBox(white, 40%, 100%);
+        font-size: 35px;
+        font-weight: bolder;
+        font-style: italic;
+        color: #8009e2;
     }
     
     menu{
@@ -40,6 +47,7 @@ header{
         @include dimensionBox(white, 60%, 100%) ;
 
         nav{
+            @include marginPadding();
             @include dimensionBox(white, 100%, 100%) ;
         }
 
@@ -48,7 +56,8 @@ header{
             @include dimensionBox(white, 100%, 100%) ;
             @include myFlexOption(space-around);
             list-style-type: none;
-        }    
+        }  
+
     }
 }
 
@@ -61,7 +70,7 @@ main{
 
     footer{
         @include myFlexOption(flex-start, flex-start);
-        @include dimensionBox(red, 100%, 30%);
+        @include dimensionBox(#8009e2, 100%, 30%);
         @include marginPadding();
         position: relative;
         bottom: 0%;
@@ -75,16 +84,47 @@ main{
 }
 
 .mainPict{
+    height: 750px;
+    width: 100%;
     @include marginPadding();
     @include myFlexOption(center);
-    height: 500px;
-    width: 100%;
+    @include imagePositon();
     background-image: url(../../pictures/voitureAccueil.jpg);
-    background-size: cover;
-    background-position: center;
+    
+
     
     h1{
         color: white;
         font-size: 64px;
     }
 } 
+
+.nouveaute{
+    h2{
+        @include marginPadding();
+        @include dimensionBox(#8009e2, 100%, 50px);
+        @include myFlexOption();
+    }
+    div{
+        @include myFlexOption(space-around)
+    }
+
+    &__bugatti{
+        @include dimensionBox(white, 400px, 250px);
+        @include imagePositon();
+        background-image: url(../../pictures/bugattiNew.png);
+
+    }
+
+    &__ferrari{
+        @include dimensionBox(white, 400px, 250px);
+        @include imagePositon();
+        background-image: url(../../pictures/ferrariNew.jpg);
+    }
+
+    &__muserati{
+        @include dimensionBox(white, 400px, 250px);
+        @include imagePositon();
+        background-image: url(../../pictures/maseratiMc20.jpg);
+    }
+}

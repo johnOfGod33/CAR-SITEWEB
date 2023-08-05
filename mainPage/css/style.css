@@ -16,17 +16,20 @@ header {
   z-index: 5;
   top: 0%;
   left: 0%;
-  border: 1px solid black;
 }
 header .logo {
   /* mixin pouur les flexbox*/
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
-  background-color: rgb(233, 19, 233);
+  background-color: white;
   height: 100%;
   width: 40%;
+  font-size: 35px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #8009e2;
 }
 header menu {
   margin: 0;
@@ -37,6 +40,8 @@ header menu {
   width: 60%;
 }
 header menu nav {
+  margin: 0;
+  padding: 0;
   /* mixin pour les dimension et la couleur*/
   background-color: white;
   height: 100%;
@@ -73,7 +78,7 @@ main footer {
   justify-content: flex-start;
   align-items: flex-start;
   /* mixin pour les dimension et la couleur*/
-  background-color: red;
+  background-color: #8009e2;
   height: 30%;
   width: 100%;
   margin: 0;
@@ -87,21 +92,67 @@ main footer ul {
 }
 
 .mainPict {
+  height: 750px;
+  width: 100%;
   margin: 0;
   padding: 0;
   /* mixin pouur les flexbox*/
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 100%;
-  background-image: url(../../pictures/voitureAccueil.jpg);
   background-size: cover;
   background-position: center;
+  background-image: url(../../pictures/voitureAccueil.jpg);
 }
 .mainPict h1 {
   color: white;
   font-size: 64px;
+}
+
+.nouveaute h2 {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #8009e2;
+  height: 50px;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nouveaute div {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nouveaute__bugatti {
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 250px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../pictures/bugattiNew.png);
+}
+.nouveaute__ferrari {
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 250px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../pictures/ferrariNew.jpg);
+}
+.nouveaute__muserati {
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 250px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../pictures/maseratiMc20.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */
