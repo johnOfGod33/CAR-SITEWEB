@@ -10,11 +10,13 @@ header {
   align-items: center;
   /* mixin pour les dimension et la couleur*/
   background-color: white;
-  height: 50px;
+  height: 10%;
   width: 100%;
   position: fixed;
+  z-index: 5;
   top: 0%;
   left: 0%;
+  border: 1px solid black;
 }
 header .logo {
   /* mixin pouur les flexbox*/
@@ -23,7 +25,7 @@ header .logo {
   align-items: center;
   /* mixin pour les dimension et la couleur*/
   background-color: rgb(233, 19, 233);
-  height: 50px;
+  height: 100%;
   width: 40%;
 }
 header menu {
@@ -31,7 +33,7 @@ header menu {
   padding: 0;
   /* mixin pour les dimension et la couleur*/
   background-color: white;
-  height: 50px;
+  height: 100%;
   width: 60%;
 }
 header menu nav {
@@ -52,6 +54,28 @@ header menu ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+main {
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  margin: 0%;
+  padding: 0%;
+}
+main footer {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* mixin pour les dimension et la couleur*/
+  background-color: red;
+  height: 15%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
