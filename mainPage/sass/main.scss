@@ -10,10 +10,14 @@ height: $height;
 width: $width;
 }
 
-
-body{
+@mixin marginPadding{
     margin: 0;
     padding: 0;
+}
+
+
+body{
+    @include marginPadding();
 }
 
 header{
@@ -32,8 +36,7 @@ header{
     }
     
     menu{
-        margin: 0;
-        padding: 0;
+        @include marginPadding();
         @include dimensionBox(white, 60%, 100%) ;
 
         nav{
@@ -41,27 +44,47 @@ header{
         }
 
         ul{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
+            @include marginPadding();
             @include dimensionBox(white, 100%, 100%) ;
-            @include myFlexOption(space-around)
+            @include myFlexOption(space-around);
+            list-style-type: none;
         }    
     }
 }
 
 main{
     @include dimensionBox(white, 100%, 75%);
+    @include marginPadding();
     position: absolute;
     top: 10%;
     left: 0%;
-    margin: 0%;
-    padding: 0%;
-    
+
     footer{
         @include myFlexOption(flex-start, flex-start);
-        @include dimensionBox(red, 100%, 15%);
+        @include dimensionBox(red, 100%, 30%);
+        @include marginPadding();
+        position: relative;
+        bottom: 0%;
+        left: 0%;
+    
+        ul{
+            list-style-type: none;
+        }
     }
+
 }
 
-
+.mainPict{
+    @include marginPadding();
+    @include myFlexOption(center);
+    height: 500px;
+    width: 100%;
+    background-image: url(../../pictures/voitureAccueil.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    h1{
+        color: white;
+        font-size: 64px;
+    }
+} 

@@ -45,7 +45,6 @@ header menu nav {
 header menu ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   /* mixin pour les dimension et la couleur*/
   background-color: white;
   height: 100%;
@@ -54,6 +53,7 @@ header menu ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style-type: none;
 }
 
 main {
@@ -61,11 +61,11 @@ main {
   background-color: white;
   height: 75%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 10%;
   left: 0%;
-  margin: 0%;
-  padding: 0%;
 }
 main footer {
   /* mixin pouur les flexbox*/
@@ -74,8 +74,34 @@ main footer {
   align-items: flex-start;
   /* mixin pour les dimension et la couleur*/
   background-color: red;
-  height: 15%;
+  height: 30%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+}
+main footer ul {
+  list-style-type: none;
+}
+
+.mainPict {
+  margin: 0;
+  padding: 0;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background-image: url(../../pictures/voitureAccueil.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.mainPict h1 {
+  color: white;
+  font-size: 64px;
 }
 
 /*# sourceMappingURL=style.css.map */
