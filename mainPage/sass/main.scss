@@ -108,7 +108,11 @@ main{
     @include myFlexOption(space-around);
     @include dimensionBox(#f4f4f9, 100%, 400px);
     @include marginPadding();
-
+    
+    a{
+        @include dimensionBox(#f4f4f9, 30%, 80%);
+        border-radius: 15px;
+    }
     ul{
         @include marginPadding();
         @include myFlexOption();

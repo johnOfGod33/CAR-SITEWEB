@@ -1,0 +1,74 @@
+header {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* mixin pour les dimension et la couleur*/
+  background-color: white;
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid #586f7c;
+  position: fixed;
+  z-index: 5;
+  top: 0%;
+  left: 0%;
+}
+header .logo {
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 100%;
+  width: 40%;
+  font-size: 35px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #586f7c;
+}
+header menu {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #586f7c;
+  height: 100%;
+  width: 60%;
+}
+header menu nav {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 100%;
+  width: 100%;
+}
+header menu ul {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+body {
+  height: 750px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../pictures/voitureAccueil2.jpg);
+}
+
+/*# sourceMappingURL=style.css.map */
