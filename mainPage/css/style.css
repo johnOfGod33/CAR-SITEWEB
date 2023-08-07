@@ -7,6 +7,7 @@ body {
 header {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -22,6 +23,7 @@ header {
 header .logo {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -48,8 +50,13 @@ header menu nav {
   background-color: #b8dbd9;
   height: 100%;
   width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-header menu ul {
+header menu a {
   margin: 0;
   padding: 0;
   /* mixin pour les dimension et la couleur*/
@@ -58,9 +65,24 @@ header menu ul {
   width: 100%;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  list-style-type: none;
+}
+header menu a:hover {
+  background-color: #586f7c;
+}
+
+span {
+  font-size: 18px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #8009e2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 main {
@@ -77,6 +99,7 @@ main {
 main footer {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   /* mixin pour les dimension et la couleur*/
@@ -100,20 +123,26 @@ main footer ul {
   padding: 0;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
-  background-image: url(../../pictures/voitureAccueil2.jpg);
+  background-image: url(../../pictures/voitureAccueil.jpg);
 }
 .mainPict h1 {
+  height: 60%;
+  width: 50%;
   color: white;
-  font-size: 64px;
+  font-size: 70px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .nouveaute {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -128,6 +157,7 @@ main footer ul {
   padding: 0;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   margin-top: 1%;
@@ -142,8 +172,8 @@ main footer ul {
   border-radius: 15px;
 }
 .nouveaute section:hover {
-  box-shadow: #b8dbd9;
-  border: 1px solid #586f7c;
+  box-shadow: 2px 2px 2px #586f7c;
+  border: 2px solid #586f7c;
 }
 .nouveaute article {
   /* mixin pour les dimension et la couleur*/
@@ -168,6 +198,7 @@ main footer ul {
   padding: 0;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -182,9 +213,10 @@ main footer ul {
   /* mixin pour les dimension et la couleur*/
   background-color: #b8dbd9;
   height: 100%;
-  width: 85%;
+  width: 60%;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -192,13 +224,18 @@ main footer ul {
   margin: 0;
   padding: 0;
   /* mixin pour les dimension et la couleur*/
-  background-color: #586f7c;
+  background-color: #f4f4f9;
   height: 100%;
-  width: 15%;
+  width: 40%;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.nouveaute p:hover {
+  background-color: #586f7c;
+  box-shadow: 2px 2px 5px #586f7c;
 }
 .nouveaute__bugatti {
   /* mixin pour les dimension et la couleur*/
@@ -243,6 +280,7 @@ main footer ul {
   padding: 0;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -251,6 +289,295 @@ main footer ul {
   font-weight: bolder;
   font-style: italic;
   color: #8009e2;
+}
+
+.navGamme {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 60px;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #586f7c;
+}
+.navGamme h2 {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 100%;
+  width: 60%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navGamme a {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 60%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navGamme a:hover {
+  background-color: #586f7c;
+}
+
+.gamme {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 1200px;
+  width: 100%;
+}
+.gamme h2 {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #586f7c;
+  height: 50px;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gamme ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 1%;
+  margin-left: 2%;
+  list-style-type: none;
+}
+.gamme div {
+  margin: 0;
+  padding: 0;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 50%;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid #586f7c;
+}
+.gamme h5 {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 100%;
+  width: 60%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gamme p {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 40%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+}
+.gamme p:hover {
+  background-color: #586f7c;
+  box-shadow: 2px 2px 5px #586f7c;
+}
+.gamme__ferrari {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 500px;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.gamme__ferrari section {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 30%;
+  width: 98%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+.gamme__ferrari section:hover {
+  box-shadow: 2px 2px 2px #586f7c;
+  border: 2px solid #586f7c;
+}
+.gamme__ferrari article {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.gamme__ferrari aside {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 70%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.gamme__ferrari1 {
+  background-image: url(../../pictures/ferrari812.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gamme__ferrari2 {
+  background-image: url(../../pictures/ferrari296gts.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gamme__ferrari3 {
+  background-image: url(../../pictures/ferrari296gtb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gamme__bugatti {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 200px;
+  width: 98%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1%;
+  border-radius: 15px;
+}
+.gamme__bugatti:hover {
+  box-shadow: 2px 2px 2px #586f7c;
+  border: 2px solid #586f7c;
+}
+.gamme__bugatti article {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.gamme__bugatti aside {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 70%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.gamme__bugatti1 {
+  background-image: url(../../pictures/bugattiMistral.png);
+  background-size: cover;
+  background-position: center;
+}
+.gamme__honda {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 200px;
+  width: 98%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1%;
+  border-radius: 15px;
+}
+.gamme__honda article {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.gamme__honda aside {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 100%;
+  width: 70%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.gamme__honda:hover {
+  box-shadow: 2px 2px 2px #586f7c;
+  border: 2px solid #586f7c;
+}
+.gamme__honda1 {
+  background-image: url(../../pictures/hondaCivicTypeR.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.aPropos {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 500px;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.aPropos h1 {
+  font-size: 35px;
+}
+.aPropos article {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 100%;
+  width: 40%;
+}
+.aPropos aside {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #586f7c;
+  height: 100%;
+  width: 60%;
+}
+.aPropos__img {
+  background-image: url(../../pictures/apropos.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */

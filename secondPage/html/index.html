@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,55 @@
         <section class="logo">DC MARKET</section>
         <menu>
             <nav>
-                <ul>
-                    <li><a href="../../mainPage/html/index.html#new">NOUVEAUTE</a></li>
-                    <li>MARQUE</li>
-                    <li>RESERVATION</li>
-                    <li>A PROPOS</li>
-                </ul>
+               <a href="../../mainPage/html/index.html#home">HOME</a>
+               <a href="../../mainPage/html/index.html#new">NOUVEAUTE</a>
+               <a href="../../mainPage/html/index.html#navGame">GAMME</a>
+               <a href="../../mainPage/html/index.html#aPropos">A PROPOS</a>
             </nav>
         </menu>
     </header>
+
+    <main class="pict">
+        <section class="pict__formulaire">
+            <h1>Enregistrez-vous</h1>
+            <form action="">
+                <table>
+                    <tr>
+                        <td><label for="nom">Nom :</label></td>
+                        <td><input type="text" id="nom"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="prenom">Prenom :</label></td>
+                        <td><input type="text" id="penom"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age :</label></td>
+                        <td><input type="text" id="age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="numero">Numéro :</label></td>
+                        <td><input type="tel" id="numero"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mail">E-mail :</label></td>
+                        <td><input type="email" id="mail"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Quand pensez-vous venir?</label></td>
+                        <td><input type="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Choisissez une couleur pour la chassis :</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="couleur" id="rouge"><label for="rouge">Rouge</label></td>
+                        <td><input type="radio" name="couleur" id="jaune"><label for="jaune">jaune</label></td>
+                        <td><input type="radio" name="couleur" id="bleu"><label for="bleu">Bleu</label></td>
+                    </tr>
+                </table>
+            </form>
+          <button class="pict__valider">Valider</button>
+        </section>
+    </main>
 </body>
 </html>

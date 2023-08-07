@@ -1,6 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -16,6 +22,7 @@ header {
 header .logo {
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   /* mixin pour les dimension et la couleur*/
@@ -42,8 +49,13 @@ header menu nav {
   background-color: #b8dbd9;
   height: 100%;
   width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-header menu ul {
+header menu a {
   margin: 0;
   padding: 0;
   /* mixin pour les dimension et la couleur*/
@@ -52,23 +64,62 @@ header menu ul {
   width: 100%;
   /* mixin pouur les flexbox*/
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  list-style-type: none;
+}
+header menu a:hover {
+  background-color: #586f7c;
 }
 
-body {
-  height: 750px;
+.pict {
+  height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  /* mixin pouur les flexbox*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  background-image: url(../../pictures/voitureAccueil2.jpg);
   background-size: cover;
   background-position: center;
-  background-image: url(../../pictures/voitureAccueil2.jpg);
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pict h1 {
+  margin: 0;
+  padding: 0;
+  /* mixin pour les dimension et la couleur*/
+  background-color: #b8dbd9;
+  height: 10%;
+  width: 100%;
+  /* mixin pouur les flexbox*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+}
+.pict__formulaire {
+  /* mixin pour les dimension et la couleur*/
+  background-color: #f4f4f9;
+  height: 50%;
+  width: 35%;
+  border-radius: 10px;
+}
+.pict__valider {
+  margin-left: 42%;
+}
+.pict form {
+  margin-top: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

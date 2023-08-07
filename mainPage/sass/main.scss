@@ -1,5 +1,6 @@
-@mixin myFlexOption($justifyContent:flex-start, $alignItem:center){ /* mixin pouur les flexbox*/
+@mixin myFlexOption($justifyContent:flex-start, $alignItem:center, $flexDirection:row){ /* mixin pouur les flexbox*/
     display: flex;
+    flex-direction: $flexDirection;
     justify-content: $justifyContent;
     align-items: $alignItem;
 } 
@@ -56,16 +57,28 @@ header{
         nav{
             @include marginPadding();
             @include dimensionBox(#b8dbd9, 100%, 100%) ;
+            @include myFlexOption(space-around);
         }
 
-        ul{
+        a{
             @include marginPadding();
             @include dimensionBox(#f4f4f9, 100%, 100%) ;
             @include myFlexOption(space-around);
-            list-style-type: none;
+            &:hover{
+                background-color: #586f7c;
+            }
         }  
 
     }
+}
+
+span{
+    @include police(18px);
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 main{
@@ -96,11 +109,15 @@ main{
     @include marginPadding();
     @include myFlexOption(center);
     @include imagePositon();
-    background-image: url(../../pictures/voitureAccueil2.jpg);
+    background-image: url(../../pictures/voitureAccueil.jpg);
     
     h1{
+        height: 60%;
+        width: 50%;
         color: white;
-        font-size: 64px;
+        font-size: 70px;
+        font-weight: bolder;
+        text-align: center;
     }
 }
 
@@ -109,10 +126,6 @@ main{
     @include dimensionBox(#f4f4f9, 100%, 400px);
     @include marginPadding();
     
-    a{
-        @include dimensionBox(#f4f4f9, 30%, 80%);
-        border-radius: 15px;
-    }
     ul{
         @include marginPadding();
         @include myFlexOption();
@@ -125,8 +138,8 @@ main{
         @include dimensionBox(#f4f4f9, 30%, 80%);
         border-radius: 15px;
         &:hover{
-            box-shadow: #b8dbd9 ;
-            border: 1px solid #586f7c;
+            box-shadow: 2px 2px 2px #586f7c ;
+            border: 2px solid #586f7c;
         }
     }
     article{
@@ -148,16 +161,20 @@ main{
         @include dimensionBox(#f4f4f9, 100%, 50%);
         border-bottom: 1px solid #586f7c;
     }
-
+    
     h5{
         @include marginPadding();
-        @include dimensionBox(#b8dbd9, 85%, 100%);
+        @include dimensionBox(#b8dbd9, 60%, 100%);
         @include myFlexOption(center);
     }
     p{
         @include marginPadding();
-        @include dimensionBox(#586f7c, 15%, 100%);
+        @include dimensionBox(#f4f4f9, 40%, 100%);
         @include myFlexOption(center);
+        &:hover{
+            background-color: #586f7c;
+            box-shadow: 2px 2px 5px #586f7c;
+        }
     }
 
     &__bugatti{
@@ -194,4 +211,186 @@ main{
         @include police();
     }
 
+}
+
+.navGamme{
+    @include marginPadding();
+    @include dimensionBox(#f4f4f9, 100%, 60px);
+    @include myFlexOption(space-around);
+    border-top: 1px solid #586f7c;
+
+    h2{
+        @include dimensionBox(#b8dbd9, 60%, 100%);
+        @include myFlexOption(center);
+    }
+
+    a{
+        @include dimensionBox(#f4f4f9, 60%, 100%);
+        @include myFlexOption(center);
+        &:hover{
+            background-color: #586f7c;
+        }
+    }
+}
+
+.gamme{
+
+  @include marginPadding();
+  @include dimensionBox(#f4f4f9, 100%, 1200px);
+ 
+
+    h2{
+    @include dimensionBox(#586f7c, 100%, 50px);
+    @include myFlexOption(center);
+    }
+
+    ul{
+        @include marginPadding();
+        margin-top: 1%;
+        margin-left: 2%;
+        list-style-type: none;
+    }
+    div{
+        @include marginPadding();
+        @include myFlexOption();
+        @include dimensionBox(#f4f4f9, 100%, 50%);
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid #586f7c;
+    }
+    
+    h5{
+        @include marginPadding();
+        @include dimensionBox(#b8dbd9, 60%, 100%);
+        @include myFlexOption(center);
+    }
+    p{
+        @include marginPadding();
+        @include dimensionBox(#f4f4f9, 40%, 100%);
+        @include myFlexOption(center);
+        border-top-right-radius: 15px;
+        &:hover{
+            background-color: #586f7c;
+            box-shadow: 2px 2px 5px #586f7c;
+        }
+    }
+  
+    &__ferrari{
+    @include marginPadding();
+    @include dimensionBox(#f4f4f9, 100%, 500px);
+    @include myFlexOption(space-around, center, column);
+
+    section{
+        @include dimensionBox(#f4f4f9, 98%, 30%);
+        @include myFlexOption();
+        @include marginPadding();
+        border-radius: 15px;
+        &:hover{
+            box-shadow: 2px 2px 2px #586f7c ;
+            border: 2px solid #586f7c;
+        }
+    }
+
+    article{
+        @include dimensionBox(#f4f4f9, 30%, 100%);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    aside{
+        @include dimensionBox(#f4f4f9, 70%, 100%);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    }
+    &__ferrari1{
+        background-image: url(../../pictures/ferrari812.jpg);
+        @include imagePositon();
+    }
+
+    &__ferrari2{
+        background-image: url(../../pictures/ferrari296gts.jpg);
+        @include imagePositon();
+    }
+
+    &__ferrari3{
+        background-image: url(../../pictures/ferrari296gtb.jpg);
+        @include imagePositon();
+    }
+
+    
+    &__bugatti{
+            @include marginPadding();
+            @include dimensionBox(#f4f4f9, 98%, 200px);
+            @include myFlexOption();
+            margin-left: 1%;
+            border-radius: 15px;
+        &:hover{
+            box-shadow: 2px 2px 2px #586f7c ;
+            border: 2px solid #586f7c;
+        }
+        article{
+            @include dimensionBox(#f4f4f9, 30%, 100%);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        aside{
+            @include dimensionBox(#f4f4f9, 70%, 100%);
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+    &__bugatti1{
+        background-image: url(../../pictures/bugattiMistral.png);
+        @include imagePositon();
+    }
+
+    &__honda{
+        @include marginPadding();
+        @include dimensionBox(#f4f4f9, 98%, 200px);
+        @include myFlexOption();
+        margin-left: 1%;
+        border-radius: 15px;
+        article{
+            @include dimensionBox(#f4f4f9, 30%, 100%);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        aside{
+            @include dimensionBox(#f4f4f9, 70%, 100%);
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    &:hover{
+        box-shadow: 2px 2px 2px #586f7c ;
+        border: 2px solid #586f7c;
+
+    
+    }
+
+ }
+ &__honda1{
+    background-image: url(../../pictures/hondaCivicTypeR.jpg);
+    @include imagePositon();
+}
+}
+
+.aPropos{
+ @include marginPadding();
+ @include dimensionBox(#f4f4f9, 100%, 500px);
+ @include myFlexOption();
+    
+    h1{
+        font-size: 35px;
+    }
+    article{
+    @include dimensionBox(#b8dbd9, 40%, 100%);
+ }
+    aside{
+    @include dimensionBox(#586f7c, 60%, 100%);
+ }
+
+    &__img{
+        background-image: url(../../pictures/apropos.jpg);
+        @include imagePositon();
+    }
 }

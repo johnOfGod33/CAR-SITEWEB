@@ -1,5 +1,6 @@
-@mixin myFlexOption($justifyContent:flex-start, $alignItem:center){ /* mixin pouur les flexbox*/
+@mixin myFlexOption($justifyContent:flex-start, $alignItem:center, $flexDirection:row){ /* mixin pouur les flexbox*/
     display: flex;
+    flex-direction: $flexDirection;
     justify-content: $justifyContent;
     align-items: $alignItem;
 } 
@@ -27,6 +28,11 @@ width: $width;
         color: $color;
 }
 
+body{
+    @include marginPadding();
+
+}
+
 header{
     @include myFlexOption();
     @include dimensionBox();
@@ -51,23 +57,56 @@ header{
         nav{
             @include marginPadding();
             @include dimensionBox(#b8dbd9, 100%, 100%) ;
+            @include myFlexOption(space-around);
         }
 
-        ul{
+        a{
             @include marginPadding();
             @include dimensionBox(#f4f4f9, 100%, 100%) ;
             @include myFlexOption(space-around);
-            list-style-type: none;
+            &:hover{
+                background-color: #586f7c;
+            }
         }  
 
     }
 }
 
-body{
-    height: 750px;
+.pict{
+    height: 100%;
     width: 100%;
-    @include marginPadding();
-    @include myFlexOption(center);
-    @include imagePositon();
+    position: absolute;
+    top: 10%;
+    left: 0%;
     background-image: url(../../pictures/voitureAccueil2.jpg);
+    @include imagePositon();
+    @include myFlexOption(center);
+
+    h1{
+        @include marginPadding();
+        @include dimensionBox(#b8dbd9, 100%, 10%);
+        @include myFlexOption(center);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        text-align: center;
+
+    }
+    &__formulaire{
+        @include dimensionBox(#f4f4f9, 35%, 50%);
+        border-radius: 10px ;
+    }
+    &__valider{
+       margin-left: 42%;
+    }
+    form{
+        margin-top: 5%;
+    }
+
+
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
